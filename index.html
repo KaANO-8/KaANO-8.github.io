@@ -1,113 +1,99 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @KaANO-8
- Sign out
- Watch 1
-  Star 0
- Fork 0 pyrospiral/pyrospiral.github.io
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs
-Branch: master Find file Copy pathpyrospiral.github.io/camera.html
-ee34363  17 hours ago
-@pyrospiral pyrospiral Update camera.html
-1 contributor
-RawBlameHistory    
-115 lines (93 sloc)  1.81 KB
 <html>
   
 <head>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src="./js/bootstrap.min.js"></script>
 
-<style>
-body {
-    margin: 0;
-    text-align: center;
-}
-#header{
-	text-align:center;
-	margin:auto;
-	padding:10px;
-	color:#ddd;
-	margin-bottom:20px;
-	background:#434D56;
-}
-#picker{
-	text-align:center;
-	width:10%;
-	padding:10px;
-	margin:auto;
-	margin-bottom:20px;
-	border-radius: 5px;
-	background:#434D56;
-}
-#display{
-	margin-bottom:20px;
-	text-align:center;
-}
-input[type='file'] {
-  color: transparent;
-  size:20%;
-  height:50px;
-  opacity: 0;
-  cursor:pointer;
-  
-}
-.select-wrapper {
-  background: url(https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2014/01/app7.png) no-repeat;
-  background-size: cover;
-  display: block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-  margin:auto;
-  
-}
-#divimg{
-	 margin:auto;
-	 height:65%;
-	 width:60%;
-	 background:#434D56;
-	 border: 3px dashed #ddd;
-	 border-radius:5px;
-	 color:#ddd;
-}
-#img{
-	padding-top:10px;
-	padding-bottom:10px;
-	height:85%;
-	visibility:hidden;
-	width:95%;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-}
-</style>
+	<style>
+	body {
+	    margin: 0;
+	    text-align: center;
+	}
+	#header{
+		text-align:center;
+		margin:auto;
+		padding:10px;
+		color:#ddd;
+		margin-bottom:20px;
+		background:#434D56;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	#picker{
+		text-align:center;
+		width:10%;
+		padding:10px;
+		margin:auto;
+		margin-bottom:20px;
+		border-radius: 5px;
+	}
+	#display{
+		margin-bottom:20px;
+		text-align:center;
+	}
+	input[type='file'] {
+	  color: transparent;
+	  size:20%;
+	  height:50px;
+	  opacity: 0;
+	  cursor:pointer;
+	  
+	}
+	.select-wrapper {
+	  background-image: url("./img/camera_icon.png");
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  display: block;
+	  position: relative;
+	  width: 80px;
+	  height: 80px;
+	  margin:auto;
+	  
+	}
+	#divimg{
+		 margin:auto;
+		 height:65%;
+		 width:60%;
+		 background:#434D56;
+		 border: 3px dashed #ddd;
+		 border-radius:5px;
+		 color:#ddd;
+	}
+	#img{
+		padding-top:10px;
+		padding-bottom:10px;
+		height:60%;
+		visibility:hidden;
+		width:95%;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	</style>
 
 
 </head>
 <body>
-<div id="header">  
-Capture image 1.8 <br><br>
+	<div id="header">  
+		<h2>Auto Colorization v1.0</h2>
+	</div>
+
+	
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-body">
+		<img id="img" src="#" 	alt="your image" height="100" width="100" />
+    </div>
+    <div class="panel-footer">
+	    <div id="picker">
+			<span class="select-wrapper">
+				<input type="file" id="file" accept="image/*" capture="camera" />
+			</span>
+		</div> 
+    </div>
+  </div>
 </div>
 
-<div id="display"> 
-<div id="divimg"  >
-Upload Image
-<img id="img" src="#" alt="your image" height="100" width="100" />
-</div>
-</div>
-
-<div id="picker">
-<span class="select-wrapper">
-<input type="file" id="file" accept="image/*" capture="camera" />
-</span>
-</div> 
   
-
-
-
 <script>
  
     function PreviewImage() {
@@ -123,5 +109,3 @@ Upload Image
 </body>
   
 </html>
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help
