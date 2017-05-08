@@ -38,8 +38,8 @@ async function Progress(){
     	await sleep(1000);
         progressbar.style.width = i+"%";
     }
-
-    progress.style.display = "none";
+    await sleep(1000);
+    progress.style.visibility = "hidden";
 };
 
 document.getElementById('file').addEventListener('change', PreviewImage, false);
